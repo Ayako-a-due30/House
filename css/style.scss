@@ -8,6 +8,22 @@ header {
     height: 100%;
     position: fixed;
     top: 0;
+    #navi {
+        margin-top: 40px;
+        margin-left: 10%;
+        .nav-menu {
+            margin-bottom: 40px;
+            li {
+                height: 40px;
+            }
+        }
+        .sns {
+            li {
+                height: 40px;
+            }
+        }
+        
+    }
 }
 
 .page-title {
@@ -22,19 +38,31 @@ header {
 #video {
     width: 100%;
     height: 100vh;
+    z-index: -1;
+    position: fixed;
 }
 
 h2 {
     text-align: center;
     font-size: 24px;
+    margin-bottom: 60px;
+}
+h2::before {
+    border-top: solid 1px #000;
+    width: 28%;
 }
 
 .wrapper {
     max-width: 900px;
     padding: 80px 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 //example--------------------------
-
+#project,#feature {
+    position: relative;
+    background-color: transparent;
+}
 .example-list {
     display: flex;
     justify-content: space-between;
@@ -48,10 +76,167 @@ h2 {
 
 .example-img {
     width: 95%;
+    position: relative;
+    padding: 4%;
+}
+
+.img-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 0.75rem;
+    color: #fff;
 }
 
 //feature--------------------------
 .feature-list {
     display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    .feature-item {
+        width: 30%;
+        text-align: center;
+        a {
+            vertical-align: middle;
+            text-align: center;
+            border-radius: 50%;
+            width: 100%;
+            border: 1px solid #000;
+            padding: calc(50% - 10px) 100;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        p.title {
+            margin-top: 160px;
+        }
+    }
+}
+
+//project--------------------------
+// #project {
+//     color: #fff;
+// }
+//flow-----------------------------
+
+.flow-chart {
+    display: flex;
+    margin-top: 50px;
+}
+.step {
+    .figure {
+        position: relative;
+        &::before {
+            content: '';
+            width: 50px;
+            height: 600px;
+            background-color:red;
+            position: absolute;
+            left: 70px;
+        }
+        li {
+            width: 200px;
+            height: 80px;
+            line-height: 80px;
+            background-color: aqua;
+            margin-bottom: 60px;
+            display: block;
+            position: relative;
+            text-align: center;
+            &::before {//三角の部分
+                content: '';
+                border-top: 30px solid pink;
+                border-left: 100px solid transparent;
+                border-right: 100px solid transparent;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}//step
+    .description {
+        position: relative;
+        margin-left: 5%;
+        span{
+            display: block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 50%;
+            background-color: #414141;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+        }
+        dt {
+            border-bottom: #414141 solid 1px;
+            line-height: 2.5;
+            margin-left: 50px;
+            font-size: 1.2rem;
+        }
+        dd {
+            margin-left: 50px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+    }//description
+
+.link {
+    display: flex;
+    justify-content: space-around;
+    a{
+        border: 1px solid #000;
+        width: 30%;
+        display: block;
+        padding: 96px 0;
+        position: relative;
+        img {
+            margin-bottom: 5px;
+            text-align: center;
+            position: absolute;
+            max-width: 100%;
+            left: 100px;
+            top: 70px;
+        }
+        p {
+            position: absolute;
+            bottom: 5px;
+            left: 96px;
+        }
+    }
+    a::before {
+        content: '';
+        border-top: 20px solid transparent;
+        border-right: 20px solid #212121;
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+    }
     
+}
+
+#footer {
+    background-color: #414141;
+    color: #fff;
+    .menu {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        li {
+            border-right: solid 1px #fff;
+            padding: 0 20px;
+        } 
+        li:last-child {
+            border-right: none;
+        }
+    }
+    .copyright {
+        text-align: center;
+        padding-bottom: 50px;
+    }
 }
