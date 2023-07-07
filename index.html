@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>明るいHOUSE</title>
     <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.scss">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -18,9 +18,7 @@
                 <li><a href="#">暮らしの日記</a></li>
                 <li><a href="#">会社概要</a></li>
             </ul>
-        </nav>
-        <nav>
-            <ul class="">
+            <ul class="sns">
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">facebook</a></li>
                 <li><a href="#">instagram</a></li>
@@ -31,16 +29,35 @@
     <div class="container">
         <main>
             <div id="video">
-                <video src="img/1279_640x360.mov" class="bv-video" loop autoplay muted playsinline></video>
+                <video src="img/1279_1280x720.mov" class="bv-video" loop autoplay muted playsinline></video>
             </div>
             <section id="project">
                 <div class="wrapper">
                     <h2 class="sec-title">建築事例をご紹介</h2>
                         <ul class="example-list">
-                            <li class="example-item"><a href=""><img src="img/project1.jpg" alt="" class="example-img"></a><p>PROJECT_01</p></li>
-                            <li class="example-item"><a href=""><img src="img/project2.jpg" alt="" class="example-img"></a><p>PROJECT_02</p></li>
-                            <li class="example-item"><a href=""><img src="img/project3.jpg" alt="" class="example-img"></a><p>PROJECT_03</p></li>
-                            <li class="example-item"><a href=""><img src="img/project4.jpg" alt="" class="example-img"></a><p>PROJECT_04</p></li>
+                            <li class="example-item">
+                                <a href="">
+                                    <img src="img/project1.jpg" alt="" class="example-img">
+                                </a>
+                                <p class="img-title">PROJECT_01</p>
+                            </li>
+                            <li class="example-item">
+                                <a href=""><img src="img/project2.jpg" alt="" class="example-img">
+                                </a>
+                                <p class="img-title">PROJECT_02</p>
+                            </li>
+                            <li class="example-item">
+                                <a href="">
+                                    <img src="img/project3.jpg" alt="" class="example-img">
+                                </a>
+                                <p class="img-title">PROJECT_03</p>
+                            </li>
+                            <li class="example-item">
+                                <a href="">
+                                    <img src="img/project4.jpg" alt="" class="example-img">
+                                </a>
+                                <p class="img-title">PROJECT_04</p>
+                            </li>
                         </ul>
                 </div>
             </section>
@@ -58,27 +75,30 @@
                 <div class="wrapper">
                     <h2 class="sec-title">家ができるまでの流れ</h2>
                     <p>お問い合わせいただいてから、家が完成するまでの流れです。</p>
-                    <div class="step">
-                        <ol class="figure">
-                            <li>ヒアリング</li>
-                            <li>プラン提案</li>
-                            <li>契約</li>
-                            <li>着工</li>
-                            <li>完成</li>
-                        </ol>
+                    <div class="flow-chart">
+                        <div class="step">
+                            <ol class="figure">
+                                <li>ヒアリング</li>
+                                <li>プラン提案</li>
+                                <li>契約</li>
+                                <li>着工</li>
+                                <li>完成</li>
+                            </ol>
+                        </div>
+                        <dl class="description">
+                            <span>1</span><dt>ヒアリング</dt>
+                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <span>2</span><dt>プラン提案</dt>
+                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <span>3</span><dt>契約</dt>
+                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <span>4</span><dt>着工</dt>
+                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <span>5</span><dt>完成</dt>
+                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                        </dl>
+
                     </div>
-                    <dl class="description">
-                        <dt><span>1</span></dt>
-                        <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-                        <dt><span>2</span></dt>
-                        <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-                        <dt><span>3</span></dt>
-                        <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-                        <dt><span>4</span></dt>
-                        <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-                        <dt><span>5</span></dt>
-                        <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
-                    </dl>
                 </div>
             </section>
             <section id="contact">
@@ -86,9 +106,9 @@
                     <h2 class="sec-title">お問い合わせ</h2>
                     <p>お問い合わせは下記からお願いいたします。</p>
                     <div class="link">
-                        <a href="#"><img src="img/icon-document.png" alt="">資料請求</a>
-                        <a href="#"><img src="img/icon-seminar.png" alt="">Web説明会</a>
-                        <a href="#"><img src="img/icon-talk.png" alt="">個別相談</a>
+                        <a href="#"><img src="img/icon-document.png" alt=""><p>資料請求</p></a>
+                        <a href="#"><img src="img/icon-seminar.png" alt=""><p>Web説明会</p></a>
+                        <a href="#"><img src="img/icon-talk.png" alt=""><p>個別相談</p></a>
                     </div>
                 </div>
             </section>
@@ -106,5 +126,6 @@
             <p class="copyright">Copyright © 2021 Akarui HOUSE All Rights Reserved.</p>
         </footer>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
