@@ -28,7 +28,6 @@ header #navi .sns li {
 
 .container {
   padding-left: 20px;
-  padding-right: 20px;
   margin-left: 300px;
 }
 
@@ -36,18 +35,37 @@ header #navi .sns li {
   width: 100%;
   height: 100vh;
   z-index: -1;
+}
+
+.bv-video {
   position: fixed;
+  top: 0;
+  z-index: -10;
 }
 
 h2 {
   text-align: center;
   font-size: 24px;
   margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-h2::before {
-  border-top: solid 1px #000;
+h2::before,
+h2::after {
+  border-top: solid 1px #212121;
   width: 28%;
+  content: "";
+}
+
+.white-title::before,
+.white-title::after {
+  border-top: solid 1px #fff;
+}
+
+section, footer {
+  margin-right: 0;
 }
 
 .wrapper {
@@ -59,7 +77,11 @@ h2::before {
 
 #project, #feature {
   position: relative;
-  background-color: transparent;
+  color: #fff;
+}
+
+#project {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
 .example-list {
@@ -70,7 +92,7 @@ h2::before {
 .example-list .example-item {
   width: 50%;
   position: relative;
-  border: solid 1px #fff;
+  border: none;
 }
 
 .example-img {
@@ -87,6 +109,10 @@ h2::before {
   color: #fff;
 }
 
+#feature {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .feature-list {
   display: flex;
   justify-content: space-between;
@@ -97,17 +123,36 @@ h2::before {
   text-align: center;
 }
 .feature-list .feature-item a {
-  vertical-align: middle;
+  display: block;
   text-align: center;
   border-radius: 50%;
   width: 100%;
-  border: 1px solid #000;
-  padding: calc(50% - 10px) 100;
+  border: 1px solid #fff;
+  padding: calc(50% - 11px) 0;
   margin-bottom: 15px;
   position: relative;
+  overflow: hidden;
+}
+.feature-list .feature-item a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  opacity: 0.3;
+  transition: 0.5s;
+}
+.feature-list .feature-item a:hover::before {
+  left: 0;
 }
 .feature-list .feature-item p.title {
-  margin-top: 160px;
+  margin-top: 80px;
+}
+
+#flow {
+  background-color: #fff;
 }
 
 .flow-chart {
@@ -122,7 +167,7 @@ h2::before {
   content: "";
   width: 50px;
   height: 600px;
-  background-color: red;
+  background-color: #ffdd00;
   position: absolute;
   left: 70px;
 }
@@ -130,15 +175,16 @@ h2::before {
   width: 200px;
   height: 80px;
   line-height: 80px;
-  background-color: aqua;
+  background-color: #212121;
   margin-bottom: 60px;
   display: block;
   position: relative;
   text-align: center;
+  color: #fff;
 }
 .step .figure li::before {
   content: "";
-  border-top: 30px solid pink;
+  border-top: 30px solid #212121;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   position: absolute;
@@ -181,6 +227,7 @@ h2::before {
 .link {
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
 }
 .link a {
   border: 1px solid #000;
@@ -190,17 +237,16 @@ h2::before {
   position: relative;
 }
 .link a img {
-  margin-bottom: 5px;
-  text-align: center;
+  vertical-align: bottom;
   position: absolute;
   max-width: 100%;
-  left: 100px;
-  top: 70px;
+  left: 35%;
+  top: 25%;
 }
 .link a p {
   position: absolute;
-  bottom: 5px;
-  left: 96px;
+  bottom: 10%;
+  left: 35%;
 }
 .link a::before {
   content: "";
@@ -210,10 +256,42 @@ h2::before {
   bottom: 4px;
   right: 4px;
 }
+.link a:hover {
+  border: 3px solid #000;
+}
+
+#contact {
+  background-color: #fff;
+}
 
 #footer {
-  background-color: #414141;
+  background-color: #212121;
   color: #fff;
+}
+#footer #top-button {
+  display: none;
+}
+#footer #top-button.show-button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background-color: #212121;
+}
+#footer #top-button::after {
+  content: "";
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  left: 17px;
+  top: 1px;
+  border-bottom: solid 7px #fff;
+  position: relative;
+}
+#footer #to-top {
+  scroll-behavior: smooth;
 }
 #footer .menu {
   padding: 50px 0;
