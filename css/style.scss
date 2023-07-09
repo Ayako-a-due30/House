@@ -25,7 +25,7 @@ header {
                 height: 40px;
             }
         }
-        
+
     }
 }
 
@@ -275,7 +275,7 @@ section,footer {
         border: 3px solid #000;
         //確認：hoverでカクカクした動きになる
     }
-    
+
 }
 //contact---------------------------
 
@@ -292,7 +292,8 @@ section,footer {
         display: none;
     }
 
-    #top-button .show-button{
+    // .show-buttonが付与されているクラス名は#top-button自身なので、#top-buttonと.show-buttonの間にスペースは入りません。上田さんのcssの書き方だと#top-buttonの子要素の.show-buttonとなっておりました。
+    #top-button.show-button{
         display: block;
         width: 50px;
         height: 50px;
@@ -301,7 +302,8 @@ section,footer {
         position: fixed;
         right: 5%;
         bottom: 5%;
-        background-color: $white;
+        // 背景色が違いました。
+        background-color: $black;
     }
     #top-button::after {
         content: '';
@@ -322,7 +324,7 @@ section,footer {
         li {
             border-right: solid 1px #fff;
             padding: 0 20px;
-        } 
+        }
         li:last-child {
             border-right: none;
         }
