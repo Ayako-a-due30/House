@@ -272,6 +272,7 @@ section, footer {
   display: none;
 }
 #footer #top-button.show-button {
+  display: block;
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
@@ -308,4 +309,4 @@ section, footer {
 #footer .copyright {
   text-align: center;
   padding-bottom: 50px;
-}/*# sourceMappingURL=style.css.map */
+}
