@@ -3,6 +3,9 @@
 $black:#212121;
 $white:#fff;
 
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
 main{
     display: block;
 }
@@ -292,7 +295,9 @@ section,footer {
         display: none;
     }
 
-    // .show-buttonが付与されているクラス名は#top-button自身なので、#top-buttonと.show-buttonの間にスペースは入りません。上田さんのcssの書き方だと#top-buttonの子要素の.show-buttonとなっておりました。
+    // .show-buttonが付与されているクラス名は#top-button自身なので、
+    // #top-buttonと.show-buttonの間にスペースは入りません。
+    // 上田さんのcssの書き方だと#top-buttonの子要素の.show-buttonとなっておりました。
     #top-button.show-button{
         display: block;
         width: 50px;
@@ -335,6 +340,154 @@ section,footer {
     }
 }
 
-@media(max-width:960px) {
+@media (max-width:960px) {
+    header {
+        width: 100%;
+    }
+    .header-title {
+        background-color: $white;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+    }
 
+    #mask {
+        display: none;
+        transition: 0.5s;
+        
+    }
+
+    #mask.open {
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        cursor: pointer;
+        display: block;
+        opacity: 0.8;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    #navi {
+        position: fixed;
+        opacity: 0;
+        transition: opacity 0.8s ease,visibility 0.8s ease;
+        visibility: hidden;
+        z-index: 20;
+    }
+    #navi.show-button {
+        opacity: 1;
+        visibility: visible;
+        z-index: 30;
+        background-color: $white;
+        width: 80%;
+        bottom: 0;
+        top: 0;
+        margin-left: 0;
+        padding: 10%;
+        margin-top: 0;
+    }
+
+    .menu-button {
+        top: 0;
+        right: 0;
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-color: $white;
+        margin: 0;
+        top: 0;
+        right: 0;
+        z-index: 20;
+        transition: 0.4s;
+        position: fixed;
+        span {
+            width: 40px;
+            height: 2px;
+            background: $black;
+            position: absolute;
+            left: 9px;
+            transition: 0.4s ease-in-out;
+        }
+        span:nth-child(1){
+            top: 14px;
+        }
+        span:nth-child(2){
+            top: 26px;
+        }
+        span:nth-child(3){
+            top: 38px;
+        }
+
+
+//ボタンがXになるアニメーション(効かない？？)
+    .menu-button.active {
+        span:nth-child(1){
+            // top: 14px;
+            // left: 3px;
+            // background: $white;
+            transform: translateY(10px) rotate (-45deg);
+        }
+        span:nth-child(2),
+        span:nth-child(3){
+            // top: 14px;
+            // left: 3px;
+            // background: $white;
+            transform: translateY(-10px) rotate (45deg);
+        }
+    }
+    }
+    .wrapper {
+        z-index: 5;
+        position: relative;
+    }
+    .container {
+        margin: 0;
+        padding: 0;
+        // position: fixed;
+        z-index: -999;//ヘッドに乗り上げちゃうのを止められない。
+    }
+    .example-list {
+        flex-direction: column;
+        .example-item {
+            width: 100%;
+        }
+    }
+    .flow-chart {
+        flex-direction: column;
+        margin-bottom: 0;
+        .step {
+            margin-left: 24%;
+        }
+        .description {
+            margin-top: 20%;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+    }
+    .inquery {
+        padding-top: 0;
+    }
+    .link {
+        margin-top: 0;
+        flex-direction: column;
+        a{
+            width: 60%;
+            margin-right: auto;
+            margin-left: auto; 
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+    }
+    .menu {
+        flex-wrap: wrap;
+    }
+    .copyright {
+        font-size: 0.75rem;
+    }
 }
+// }
