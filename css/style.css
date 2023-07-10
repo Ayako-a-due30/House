@@ -393,12 +393,14 @@ section, footer {
   .menu-button span:nth-child(3) {
     top: 38px;
   }
-  .menu-button .menu-button.active span:nth-child(1) {
-    transform: translateY(10px) rotate -45deg;
+  .menu-button.active span:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
   }
-  .menu-button .menu-button.active span:nth-child(2),
-  .menu-button .menu-button.active span:nth-child(3) {
-    transform: translateY(-10px) rotate 45deg;
+  .menu-button.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-button.active span:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
   }
   .wrapper {
     z-index: 5;
@@ -407,6 +409,7 @@ section, footer {
   .container {
     margin: 0;
     padding: 0;
+    position: relative;
     z-index: -999;
   }
   .example-list {
@@ -447,4 +450,4 @@ section, footer {
   .copyright {
     font-size: 0.75rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
