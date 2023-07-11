@@ -291,37 +291,6 @@ section,footer {
     background-color: $black;
     color: $white;
 
-    #top-button {
-        display: none;
-    }
-
-    // .show-buttonが付与されているクラス名は#top-button自身なので、
-    // #top-buttonと.show-buttonの間にスペースは入りません。
-    // 上田さんのcssの書き方だと#top-buttonの子要素の.show-buttonとなっておりました。
-    #top-button.show-button{
-        display: block;
-        width: 50px;
-        height: 50px;
-        border: 1px solid $white;
-        border-radius: 50%;
-        position: fixed;
-        right: 5%;
-        bottom: 5%;
-        // 背景色が違いました。
-        background-color: $black;
-    }
-    #top-button::after {
-        content: '';
-        border-right: 7px solid transparent;
-        border-left: 7px solid transparent;
-        left: 17px;
-        top: 1px;
-        border-bottom: solid 7px $white;
-        position: relative;
-    }
-    #to-top {
-        scroll-behavior: smooth;//効いてる？？
-    }
     .menu {
         padding: 50px 0;
         display: flex;
@@ -423,6 +392,38 @@ section,footer {
             top: 38px;
         }
     }
+    #top-button {
+        display: none;
+    }
+
+    // .show-buttonが付与されているクラス名は#top-button自身なので、
+    // #top-buttonと.show-buttonの間にスペースは入りません。
+    // 上田さんのcssの書き方だと#top-buttonの子要素の.show-buttonとなっておりました。
+    #top-button.show-button{
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        // 背景色が違いました。
+        background-color: $black;
+    }
+    #top-button::after {
+        content: '';
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        left: 17px;
+        top: 1px;
+        border-bottom: solid 7px $white;
+        position: relative;
+    }
+    #to-top {
+        scroll-behavior: smooth;//効いてる？？
+    }
+
     // .menu-buttonの中に.menu-buttonがネスト化されておりました。
     //ボタンがXになるアニメーション(効かない？？)
         .menu-button.active {
