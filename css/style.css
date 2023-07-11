@@ -393,14 +393,20 @@ section, footer {
   .menu-button span:nth-child(3) {
     top: 38px;
   }
+  .menu-button.active {
+    background-color: #212121;
+    transition: 0.5s;
+  }
   .menu-button.active span:nth-child(1) {
     transform: translateY(12px) rotate(-45deg);
+    background-color: #fff;
   }
   .menu-button.active span:nth-child(2) {
     opacity: 0;
   }
   .menu-button.active span:nth-child(3) {
     transform: translateY(-12px) rotate(45deg);
+    background-color: #fff;
   }
   .wrapper {
     z-index: 5;
@@ -450,4 +456,4 @@ section, footer {
   .copyright {
     font-size: 0.75rem;
   }
-}
+}/*# sourceMappingURL=style.css.map */
