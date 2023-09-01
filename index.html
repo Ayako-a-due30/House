@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>明るいHOUSE</title>
-    <link rel="icon" href="img/favicon.ico">
+    <title>ケータリングふわり</title>
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/destyle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <header>
         <h1 class="header-title">
             <a href="index.html">
-                <img src="img/logo.svg" alt="" class="page-title">
+                <img src="img/logo.png" alt="" class="page-title">
             </a>
             <div class="menu-button" id="menu-button">
                 <span></span>
@@ -27,11 +27,10 @@
         </h1>
         <nav id="navi">
             <ul class="nav-menu">
-                <li><a href="#">私たちについて</a></li>
-                <li><a href="#">サービス</a></li>
-                <li><a href="#">商品情報</a></li>
-                <li><a href="#">展示会</a></li>
-                <li><a href="#">暮らしの日記</a></li>
+                <li><a href="#project">ケータリング実績</a></li>
+                <li><a href="#feature">ふわりについて</a></li>
+                <li><a href="#flow">ご予約の流れ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
                 <li><a href="#">会社概要</a></li>
             </ul>
             <ul class="sns">
@@ -45,87 +44,89 @@
     <div class="container">
         <main>
             <div id="video">
-                <video src="img/1279_1280x720.mov" class="bv-video" loop autoplay muted playsinline></video>
+                <img src="img/eyecatch.jpg" alt="">
             </div>
+            <section id="feature">
+                <div class="wrapper">
+                    <h2 class="sec-title white-title">ふわりについて</h2>
+                    <ul class="feature-list">
+                        <li class="feature-item"><a href="#">Arrange</a>
+                            <p class="title">幹事様の仕事は最小限に</p>
+                            <p>イベント当日は当社のスタッフが設営からビュッフェのセッティング、ドリンクサービス、撤収や回収まで行います。</p>
+                        </li>
+                        <li class="feature-item"><a href="#">Setting</a>
+                            <p class="title">イベントづくりもおまかせ</p>
+                            <p>開催されるイベントや、会場のテーマに合わせた装飾を行う事で、
+                                お食事を設置するテーブルが一気に華やかなフォトスポットに。</p>
+                        </li>
+                        <li class="feature-item"><a href="#">Cuisine</a>
+                            <p class="title">会話を生み出す工夫が詰まった料理 </p>
+                            <p>参加者のアレルギーや好みに対応できるよう、様々な料理を提供しております。ベジタリアンなど各種要望にお応えします。</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section id="project">
                 <div class="wrapper">
-                    <h2 class="sec-title white-title">建築事例をご紹介</h2>
+                    <h2 class="sec-title white-title">ケータリング実績</h2>
                     <ul class="example-list">
                         <li class="example-item">
                             <a href="">
-                                <img src="img/project1.jpg" alt="" class="example-img">
+                                <img src="img/arrange1.jpg" alt="" class="example-img">
                             </a>
                             <p class="img-title">PROJECT_01</p>
                         </li>
                         <li class="example-item">
-                            <a href=""><img src="img/project2.jpg" alt="" class="example-img">
+                            <a href=""><img src="img/arrange2.jpg" alt="" class="example-img">
                             </a>
                             <p class="img-title">PROJECT_02</p>
                         </li>
                         <li class="example-item">
                             <a href="">
-                                <img src="img/project3.jpg" alt="" class="example-img">
+                                <img src="img/arrange3.jpg" alt="" class="example-img">
                             </a>
                             <p class="img-title">PROJECT_03</p>
                         </li>
                         <li class="example-item">
                             <a href="">
-                                <img src="img/project4.jpg" alt="" class="example-img">
+                                <img src="img/arrange4.jpg" alt="" class="example-img">
                             </a>
                             <p class="img-title">PROJECT_04</p>
                         </li>
                     </ul>
                 </div>
             </section>
-            <section id="feature">
-                <div class="wrapper">
-                    <h2 class="sec-title white-title">明るいHOUSEの特徴</h2>
-                    <ul class="feature-list">
-                        <li class="feature-item"><a href="#">design</a>
-                            <p class="title">デザイン</p>
-                            <p>テキストテキスト</p>
-                        </li>
-                        <li class="feature-item"><a href="#">quality</a>
-                            <p class="title">性能</p>
-                            <p>テキストテキスト</p>
-                        </li>
-                        <li class="feature-item"><a href="#">support</a>
-                            <p class="title">サポート</p>
-                            <p>テキストテキスト</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+
             <section id="flow">
                 <div class="wrapper">
-                    <h2 class="sec-title">家ができるまでの流れ</h2>
-                    <p>お問い合わせいただいてから、家が完成するまでの流れです。</p>
+                    <h2 class="sec-title">ご予約の流れ</h2>
+                    <p>お問い合わせいただいてから、ケータリング当日までの流れです。</p>
                     <div class="flow-chart">
                         <div class="step">
                             <ol class="figure">
                                 <li>ヒアリング</li>
                                 <li>プラン提案</li>
                                 <li>契約</li>
-                                <li>着工</li>
-                                <li>完成</li>
+                                <li>ケータリング当日</li>
+                                <li>お支払い</li>
                             </ol>
                         </div>
                         <dl class="description">
                             <span>1</span>
                             <dt>ヒアリング</dt>
-                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <dd>担当者がご要望をしっかりヒアリング。7日前までにお願いしております。</dd>
                             <span>2</span>
                             <dt>プラン提案</dt>
-                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <dd>要望、予算に応じて最適なプランをご提案します。</dd>
                             <span>3</span>
                             <dt>契約</dt>
-                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <dd>プランに納得いただけましたら、ご契約をお願いいたします。</dd>
                             <span>4</span>
-                            <dt>着工</dt>
-                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <dt>ケータリング当日</dt>
+                            <dd>開催日5日前がご人数確定日となります。以降キャンセル料金が発生しますのでご確認ください。</dd>
                             <span>5</span>
-                            <dt>完成</dt>
-                            <dd>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                            <dt>ご精算</dt>
+                            <dd>お振込期日までに指定口座にご入金ください。</dd>
                         </dl>
 
                     </div>
@@ -158,7 +159,7 @@
                 <li><a href="#">暮らしの日記</a></li>
                 <li><a href="#">会社概要</a></li>
             </ul>
-            <p class="copyright">Copyright © 2021 Akarui HOUSE All Rights Reserved.</p>
+            <p class="copyright">Copyright © 2023 ケータリングふわり All Rights Reserved.</p>
         </footer>
     </div>
     <a href="#video" id="to-top">
